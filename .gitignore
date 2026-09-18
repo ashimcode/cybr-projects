@@ -1,0 +1,58 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+secrets/
+
+# Local runtime state
+.graphiti/
+.openclaw/
+**/runtime/
+**/tmp/
+**/cache/
+*.sqlite
+*.db
+
+# Evidence that may contain sensitive data
+**/evidence/raw/
+**/evidence/unredacted/
+**/evidence/*/raw/
+*.pcap
+*.pcapng
+*.evtx
+*.dmp
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Local media exports
+*.mp4
+*.mov
+*.mkv
