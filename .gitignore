@@ -56,3 +56,6 @@ npm-debug.log*
 *.mp4
 *.mov
 *.mkv
+
+# Temporary document and PDF rendering artifacts
+/tmp/
