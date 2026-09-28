@@ -9,7 +9,8 @@ Hands-on cybersecurity engineering projects built sequentially as a learning por
 | Shared platform planning | In progress |
 | Project 1 — Home SIEM & Investigation Write-Up | Phase 1 planning |
 | GitHub repository | [Public repository](https://github.com/ashimcode/cybr-projects) initialized on `main` |
-| Public publishing | Planned after sanitization review |
+| Public publishing | Repository shell is public; project evidence remains gated by verification and sanitization review |
+| Career application materials | Kept locally and excluded from the public portfolio repository |
 
 ## How this repository is used
 
@@ -34,6 +35,12 @@ The repository documents:
 5. Cloud Misconfiguration Hunt & Remediation
 
 The complete sequence is maintained in [ROADMAP.md](ROADMAP.md).
+
+## Portfolio boundary
+
+This repository is the public engineering portfolio. It contains project architecture, code, sanitized evidence, investigation reports, and verified learning outcomes. Role-specific résumés, cover letters, application essays, recruiter correspondence, and other job-search materials remain local and are excluded by `.gitignore`.
+
+The standalone Ethernet switching and wireless bridging lab is maintained in its own repository: [ashimcode/ethernet-switching-wireless-bridging-lab](https://github.com/ashimcode/ethernet-switching-wireless-bridging-lab).
 
 ## Safety boundary
 
