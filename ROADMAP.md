@@ -1,10 +1,8 @@
 # CYBR Projects — Cybersecurity Engineering Roadmap
 
-This repository documents a sequential portfolio of hands-on cybersecurity engineering projects. All project work remains inside this workspace:
+This repository documents a sequential portfolio of hands-on cybersecurity engineering projects. All project work remains inside the repository workspace.
 
-`C:\Users\admin\Desktop\CYBR Projects`
-
-The repository will eventually be published as a detailed GitHub monorepo. Project folders are created in numerical order and are not skipped or combined.
+The repository is published as a detailed GitHub monorepo. Project folders are created in numerical order and are not skipped or combined.
 
 ## Operating principles
 
