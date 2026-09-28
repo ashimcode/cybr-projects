@@ -62,7 +62,8 @@ Layers 2, 5, and 6 will be documented when the evidence or protocol behavior mak
 
 ## Open decisions before Phase 2
 
-- [ ] Confirm VMware network mode and lab IP plan.
+- [x] Inspect the current VM inventory and network modes; Ubuntu 24.04.3 and a Kali/Debian lab VM definition were found, both using NAT.
+- [ ] Confirm the isolated VMware network mode and lab IP plan for the Windows telemetry VM.
 - [ ] Obtain or create a dedicated Windows lab VM.
 - [ ] Choose the telemetry collector: Elastic Agent or Winlogbeat.
 - [ ] Select and document a Sysmon configuration source.
@@ -72,7 +73,7 @@ Layers 2, 5, and 6 will be documented when the evidence or protocol behavior mak
 
 ## Current verification note
 
-The local OpenClaw/Graphiti supporting services and an existing Splunk container were checked on 2026-09-28. Those services are useful infrastructure, but VMware Workstation, a dedicated Windows lab VM, Sysmon, and an end-to-end collector path were not verified. Phase 1 therefore remains open. No attack simulation should begin until the isolated endpoint and rollback boundary exist.
+The local OpenClaw/Graphiti supporting services and an existing Splunk container were checked on 2026-09-28. The VM inventory contains Linux guests, but VMware Workstation, `vmrun`, a dedicated Windows lab VM, Sysmon, and an end-to-end collector path were not verified. Phase 1 architecture is documented, while the endpoint prerequisite remains open. No attack simulation should begin until the isolated endpoint and rollback boundary exist. See [`prerequisite-audit-2026-09-28.md`](prerequisite-audit-2026-09-28.md).
 
 ## Phase 1 learning checkpoint
 

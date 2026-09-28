@@ -41,7 +41,7 @@ The current recommendation is a hybrid design:
 - Physical host: Windows 11 Pro workstation; device and hardware identifiers are intentionally omitted from the public repository
 - Existing virtualization: Linux VM support is available; a dedicated Windows telemetry VM remains a prerequisite
 - Docker: installed and available
-- Local supporting runtime: OpenClaw autonomy, Graphiti, FalkorDB, Neo4j, and a Splunk container are available; see [`../00-Shared-Platform/documentation/runtime-baseline.md`](../00-Shared-Platform/documentation/runtime-baseline.md)
+- Local supporting runtime: OpenClaw autonomy, Graphiti, FalkorDB, Neo4j, and a Splunk container are available; see [`../00-Shared-Platform/documentation/runtime-baseline.md`](../00-Shared-Platform/documentation/runtime-baseline.md) and the [`prerequisite audit`](docs/prerequisite-audit-2026-09-28.md)
 - Cloud: local-only preferred for the initial project
 - Repository: intended to become a public GitHub portfolio repository after review
 
