@@ -60,5 +60,8 @@ npm-debug.log*
 # Separate lab repository maintained in its own GitHub repository
 /ethernet-switching-wireless-bridging-lab/
 
+# Private job-search materials; keep application documents outside the public portfolio
+/Career Applications/
+
 # Temporary document and PDF rendering artifacts
 /tmp/
