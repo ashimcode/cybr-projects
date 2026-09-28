@@ -10,7 +10,7 @@ This note records what is actually available on the local development host. It i
 |---|---|---|---|
 | OpenClaw autonomy runtime | `http://127.0.0.1:8787/health` | Healthy at the 2026-09-28 audit; autonomous mode; not stopped | Can run policy-checked local workflows and write sanitized audit events |
 | Graphiti memory | `http://127.0.0.1:8090/health` | Healthy; Ollama provider; FalkorDB graph backend | Available for durable, non-secret project context |
-| Splunk | local container; web `8000`, HEC `8088` | Container healthy; Splunk 10.4.3 image | Existing local SIEM candidate; not yet connected to the Project 1 Windows endpoint |
+| Splunk | local container; web `8000`, HEC `8088` | Container healthy; HEC health check passed and a sanitized synthetic event was accepted | Existing local SIEM candidate; not yet connected to the Project 1 Windows endpoint |
 | Neo4j / FalkorDB | local container services | Running as Graphiti dependencies | Supporting memory infrastructure, not security telemetry evidence |
 
 Docker Engine 29.7.2 is available. The local compose port bindings were tightened on 2026-09-28 and now resolve to `127.0.0.1` for Splunk, Graphiti, Neo4j, and FalkorDB. Before any Windows telemetry is connected, still verify the host firewall and VMware network mode.

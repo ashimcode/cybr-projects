@@ -73,7 +73,7 @@ Layers 2, 5, and 6 will be documented when the evidence or protocol behavior mak
 
 ## Current verification note
 
-The local OpenClaw/Graphiti supporting services and an existing Splunk container were checked on 2026-09-28. The VM inventory contains Linux guests, but VMware Workstation, `vmrun`, a dedicated Windows lab VM, Sysmon, and an end-to-end collector path were not verified. Phase 1 architecture is documented, while the endpoint prerequisite remains open. No attack simulation should begin until the isolated endpoint and rollback boundary exist. See [`prerequisite-audit-2026-09-28.md`](prerequisite-audit-2026-09-28.md).
+The local OpenClaw/Graphiti supporting services and an existing Splunk container were checked on 2026-09-28. Splunk HEC accepted a sanitized synthetic loopback event, but that is only an ingestion-boundary check. The VM inventory contains Linux guests, while VMware Workstation, `vmrun`, a dedicated Windows lab VM, Sysmon, and an end-to-end endpoint collector path were not verified. Phase 1 architecture is documented, while the endpoint prerequisite remains open. No attack simulation should begin until the isolated endpoint and rollback boundary exist. See [`prerequisite-audit-2026-09-28.md`](prerequisite-audit-2026-09-28.md) and [`phase-2-ingestion-boundary.md`](phase-2-ingestion-boundary.md).
 
 ## Phase 1 learning checkpoint
 
