@@ -6,8 +6,8 @@ Hands-on cybersecurity engineering projects built sequentially as a learning por
 
 | Item | Status |
 |---|---|
-| Shared platform planning | In progress |
-| Project 1 — Home SIEM & Investigation Write-Up | Phase 1 planning |
+| Shared platform planning | Runtime baseline verified; memory boundary documented |
+| Project 1 — Home SIEM & Investigation Write-Up | Phase 1 architecture and local-service audit complete; isolated Windows/Sysmon boundary still open |
 | GitHub repository | [Public repository](https://github.com/ashimcode/cybr-projects) initialized on `main` |
 | Public publishing | Repository shell is public; project evidence remains gated by verification and sanitization review |
 | Career application materials | Kept locally and excluded from the public portfolio repository |

@@ -1,6 +1,6 @@
 # Project 1 — Home SIEM & Investigation Write-Up
 
-**Status:** Phase 1 — Architecture and prerequisites planning
+**Status:** Phase 1 — Architecture documented; local supporting services verified; isolated Windows/Sysmon telemetry path still required
 
 **Documentation standard:** This project is written as professional SOC or security-engineering documentation, with plain-language explanations so that a student or interviewer can understand the purpose, data flow, evidence, and decisions.
 
@@ -41,6 +41,7 @@ The current recommendation is a hybrid design:
 - Physical host: Windows 11 Pro workstation; device and hardware identifiers are intentionally omitted from the public repository
 - Existing virtualization: Linux VM support is available; a dedicated Windows telemetry VM remains a prerequisite
 - Docker: installed and available
+- Local supporting runtime: OpenClaw autonomy, Graphiti, FalkorDB, Neo4j, and a Splunk container are available; see [`../00-Shared-Platform/documentation/runtime-baseline.md`](../00-Shared-Platform/documentation/runtime-baseline.md)
 - Cloud: local-only preferred for the initial project
 - Repository: intended to become a public GitHub portfolio repository after review
 
@@ -50,7 +51,7 @@ Cloud is not required for Project 1. A local lab avoids cloud costs, keeps telem
 
 ## Phase gates
 
-- [ ] Phase 1 — Architecture and prerequisites approved
+- [ ] Phase 1 — Architecture and prerequisites approved (supporting services verified; isolated Windows/Sysmon prerequisites remain)
 - [ ] Phase 2 — Environment setup and scripting verified
 - [ ] Phase 3 — Safe simulation and telemetry verified
 - [ ] Phase 4 — Investigation, hardening, and report completed

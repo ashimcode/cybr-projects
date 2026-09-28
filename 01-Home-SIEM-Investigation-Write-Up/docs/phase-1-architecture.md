@@ -70,6 +70,10 @@ Layers 2, 5, and 6 will be documented when the evidence or protocol behavior mak
 - [ ] Define the OpenClaw and Graphiti connection boundary.
 - [ ] Define the first safe simulation test.
 
+## Current verification note
+
+The local OpenClaw/Graphiti supporting services and an existing Splunk container were checked on 2026-09-28. Those services are useful infrastructure, but VMware Workstation, a dedicated Windows lab VM, Sysmon, and an end-to-end collector path were not verified. Phase 1 therefore remains open. No attack simulation should begin until the isolated endpoint and rollback boundary exist.
+
 ## Phase 1 learning checkpoint
 
 Before Phase 2, explain in your own words:
