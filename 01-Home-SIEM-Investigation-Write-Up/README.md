@@ -75,3 +75,5 @@ By completion, the learner should be able to explain the telemetry path from Win
 - `automation/` — OpenClaw workflow documentation and definitions
 - `memory/` — Graphiti entity and relationship documentation
 - `tests/` — repeatable checks
+- `docs/interview-walkthrough.md` — current interview-ready explanation with verified and unverified boundaries
+- `docs/linkedin-brief.md` — future promotion draft held behind the Windows/Sysmon evidence gate
