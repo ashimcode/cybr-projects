@@ -57,5 +57,8 @@ npm-debug.log*
 *.mov
 *.mkv
 
+# Separate lab repository maintained in its own GitHub repository
+/ethernet-switching-wireless-bridging-lab/
+
 # Temporary document and PDF rendering artifacts
 /tmp/
