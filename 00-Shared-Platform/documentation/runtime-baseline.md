@@ -13,7 +13,7 @@ This note records what is actually available on the local development host. It i
 | Splunk | local container; web `8000`, HEC `8088` | Container healthy; Splunk 10.4.3 image | Existing local SIEM candidate; not yet connected to the Project 1 Windows endpoint |
 | Neo4j / FalkorDB | local container services | Running as Graphiti dependencies | Supporting memory infrastructure, not security telemetry evidence |
 
-Docker Engine 29.7.2 is available. The local compose configuration currently publishes several service ports broadly through Docker. Before any Windows telemetry is connected, bind dashboards and ingestion endpoints to loopback or an explicitly isolated lab network, then verify the host firewall and VMware network mode.
+Docker Engine 29.7.2 is available. The local compose port bindings were tightened on 2026-09-28 and now resolve to `127.0.0.1` for Splunk, Graphiti, Neo4j, and FalkorDB. Before any Windows telemetry is connected, still verify the host firewall and VMware network mode.
 
 ## Missing completion prerequisites
 
