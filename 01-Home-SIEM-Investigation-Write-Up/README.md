@@ -42,7 +42,7 @@ The current recommendation is a hybrid design:
 - Existing virtualization: Linux VM support is available; a dedicated Windows telemetry VM remains a prerequisite
 - Docker: installed and available
 - Local supporting runtime: OpenClaw autonomy, Graphiti, FalkorDB, Neo4j, and a Splunk container are available; see [`../00-Shared-Platform/documentation/runtime-baseline.md`](../00-Shared-Platform/documentation/runtime-baseline.md) and the [`prerequisite audit`](docs/prerequisite-audit-2026-09-28.md)
-- Synthetic ingestion boundary: local Splunk HEC accepted a sanitized test event; this does not represent Windows or Sysmon telemetry. See [`phase-2-ingestion-boundary.md`](docs/phase-2-ingestion-boundary.md)
+- Synthetic ingestion boundary: local Splunk HEC accepted a sanitized test event; this does not represent Windows or Sysmon telemetry. The local Splunk instance also contains unrelated pre-existing host data that is excluded from Project 1 evidence and must not be exported. See [`phase-2-ingestion-boundary.md`](docs/phase-2-ingestion-boundary.md)
 - Cloud: local-only preferred for the initial project
 - Repository: intended to become a public GitHub portfolio repository after review
 

@@ -9,6 +9,7 @@ The local defensive-services baseline is available, but Project 1 cannot move to
 | Component | Observation | Consequence |
 |---|---|---|
 | Splunk | Local container healthy; web interface responded on loopback | Available as a local SIEM candidate, not yet receiving Project 1 endpoint telemetry |
+| Splunk data boundary | An internal search surfaced unrelated pre-existing host events in the local `main` index; they were not exported or used as evidence | A dedicated Project 1 index/source boundary is required before endpoint telemetry is enabled |
 | Graphiti | Local health endpoint responded successfully | Available for sanitized project memory |
 | OpenClaw autonomy | Local health endpoint reported autonomous mode and not stopped; source syntax check passed | Available for policy-checked local workflow automation |
 | VMware VM definitions | Ubuntu 24.04.3 and a Kali/Debian lab VM definition are present; both are configured for NAT | Existing Linux assets can support tooling, but neither is the required Windows telemetry source |
