@@ -1,0 +1,45 @@
+name: Portfolio hygiene
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check whitespace errors
+        run: git diff --check
+
+      - name: Scan for credential and private-key markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          if rg -n -i --hidden --glob '!.git/**' --glob '!node_modules/**' \
+            '(BEGIN (RSA|OPENSSH|EC|DSA) PRIVATE KEY|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|discord\.com/api/webhooks)' .; then
+            echo 'Potential credential marker found.' >&2
+            exit 1
+          fi
+
+      - name: Scan for local machine paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          if rg -n --hidden --glob '!.git/**' --glob '!.github/workflows/portfolio-hygiene.yml' '(C:\\Users\\|C:/Users/|/Users/|/home/)' .; then
+            echo 'Machine-specific path found.' >&2
+            exit 1
+          fi
+
+      - name: Verify portfolio entry points
+        run: |
+          test -f README.md
+          test -f SECURITY.md
+          test -f CONTRIBUTING.md
+          test -f 01-Home-SIEM-Investigation-Write-Up/docs/interview-walkthrough.md
+          test -f 01-Home-SIEM-Investigation-Write-Up/docs/phase-2-setup-plan.md
