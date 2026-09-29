@@ -20,7 +20,7 @@ The current recommendation is a hybrid design:
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────┐
-│ Windows 11 Pro physical host: redacted-host                                  │
+│ Windows 11 Pro physical host                                      │
 │                                                                     │
 │  ┌──────────────────────────┐      ┌─────────────────────────────┐  │
 │  │ VMware lab network       │      │ Docker service environment  │  │

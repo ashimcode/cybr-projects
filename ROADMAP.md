@@ -173,7 +173,7 @@ The shared platform is infrastructure for the projects, not a replacement for an
 ## Confirmed Project 1 environment
 
 - Physical host: Windows 11 Pro workstation; device and hardware identifiers are intentionally omitted from the public repository
-- Existing virtualization: Ubuntu VM in VMware Workstation.
+- Existing virtualization: Linux VM support is available; a dedicated Windows telemetry VM remains a prerequisite for Project 1.
 - Docker, Git, and GitHub CLI are installed; Docker is running.
 - GitHub account: `ashimcode`.
 - Repository: [ashimcode/cybr-projects](https://github.com/ashimcode/cybr-projects), public, default branch `main`.
