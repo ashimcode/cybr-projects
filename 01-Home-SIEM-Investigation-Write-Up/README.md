@@ -72,6 +72,7 @@ By completion, the learner should be able to explain the telemetry path from Win
 - `evidence/` — sanitized screenshots, videos, and logs
 - `reports/` — investigation and executive reports
 - `scripts/` — modular setup and verification scripts
+- `scripts/send-synthetic-hec-event.ps1` — credential-free-source test for the local HEC boundary; synthetic only
 - `automation/` — OpenClaw workflow documentation and definitions
 - `memory/` — Graphiti entity and relationship documentation
 - `tests/` — repeatable checks

@@ -17,6 +17,10 @@ The local Splunk HEC endpoint responded healthy on the loopback interface, and a
 
 The accepted event was intentionally labeled `cybr:validation` and stated that it was synthetic-only. It contained no personal data, production indicators, credentials, or raw endpoint telemetry. The test validates the receiving boundary; it is not evidence that Windows Event Logs or Sysmon are flowing.
 
+## Reproducible check
+
+The repository includes [`scripts/send-synthetic-hec-event.ps1`](../scripts/send-synthetic-hec-event.ps1). Set `SPLUNK_HEC_URL` and `SPLUNK_HEC_TOKEN` only in the current process environment, then run the script from the project folder. The token is never written to the repository or printed by the script.
+
 ## Next implementation step
 
 After a dedicated Windows lab VM is available:
