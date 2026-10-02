@@ -1,6 +1,6 @@
 # Phase 2 ingestion-boundary check
 
-**Validation date:** 2026-10-02 recheck (original acceptance recorded on 2026-09-28)  
+**Validation date:** 2026-10-02 recheck (original acceptance recorded on 2026-09-28)
 **Scope:** local Splunk HTTP Event Collector (HEC) acceptance only
 
 ## Verified
