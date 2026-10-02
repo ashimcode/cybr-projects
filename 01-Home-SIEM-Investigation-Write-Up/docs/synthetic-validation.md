@@ -24,7 +24,7 @@ synthetic detection fixture: passed (2 cases)
 
 ## Receiver boundary
 
-The local Splunk HEC accepted a clearly labeled synthetic validation event with `Success` / code `0` on 2026-09-28. The reusable sender is [`scripts/send-synthetic-hec-event.ps1`](../scripts/send-synthetic-hec-event.ps1); it reads the HEC URL and token only from process environment variables.
+The local Splunk HEC accepted a clearly labeled synthetic validation event with `Success` / code `0` on 2026-10-02; the original acceptance was recorded on 2026-09-28. The reusable sender is [`scripts/send-synthetic-hec-event.ps1`](../scripts/send-synthetic-hec-event.ps1); it reads the HEC URL and token only from process environment variables.
 
 ## Boundary statement
 
