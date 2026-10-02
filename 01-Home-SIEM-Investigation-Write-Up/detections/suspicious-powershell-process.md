@@ -22,6 +22,19 @@ This combination is intentionally narrow for the first test. Encoded PowerShell 
 - Was the PowerShell binary signed and located in the expected system path?
 - Did the process create follow-on files, network connections, or child processes?
 
+## Draft SIEM query template
+
+After a dedicated Project 1 index and normalized Sysmon fields exist, the first Splunk query can be adapted from this bounded template:
+
+```spl
+index="<project-index>" sourcetype="<normalized-sysmon-process>" event_code=1
+| where match(lower(image), "\\\\powershell\\.exe$")
+| where match(lower(command_line), "\\s-enc(odedcommand)?\\s")
+| table _time host user parent_image image command_line
+```
+
+This is a query design aid, not a live alert. Field names, escaping, event normalization, false positives, and the project index must be validated against the real collector path.
+
 ## Validation boundary
 
-The accompanying synthetic test verifies only the matching logic. It does not prove that Sysmon is installed, that the collector preserves the required fields, or that a live SIEM alert is generated.
+The accompanying synthetic test verifies only the matching logic against the checked-in fixture. It does not prove that Sysmon is installed, that the collector preserves the required fields, or that a live SIEM alert is generated.

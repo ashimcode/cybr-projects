@@ -43,6 +43,8 @@ jobs:
           test -f CONTRIBUTING.md
           test -f 01-Home-SIEM-Investigation-Write-Up/docs/interview-walkthrough.md
           test -f 01-Home-SIEM-Investigation-Write-Up/docs/phase-2-setup-plan.md
+          test -f 01-Home-SIEM-Investigation-Write-Up/docs/synthetic-validation.md
+          test -f 01-Home-SIEM-Investigation-Write-Up/tests/fixtures/suspicious-powershell-events.json
 
       - name: Run synthetic detection fixture
         run: node 01-Home-SIEM-Investigation-Write-Up/tests/test_synthetic_detection.mjs

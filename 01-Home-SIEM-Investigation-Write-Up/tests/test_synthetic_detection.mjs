@@ -1,4 +1,6 @@
 // Synthetic-only test for the draft PowerShell detection.
+import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 function isSuspiciousPowerShell(event) {
   if (event.event_code !== 1) return false;
@@ -9,19 +11,14 @@ function isSuspiciousPowerShell(event) {
       .some((flag) => commandLine.includes(flag));
 }
 
-const positive = {
-  event_code: 1,
-  image: 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',
-  command_line: 'powershell.exe -NoProfile -EncodedCommand AAAA'
-};
+const fixturePath = fileURLToPath(new URL('./fixtures/suspicious-powershell-events.json', import.meta.url));
+const fixtures = JSON.parse(fs.readFileSync(fixturePath, 'utf8'));
 
-const negative = {
-  event_code: 1,
-  image: 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',
-  command_line: 'powershell.exe -NoProfile -File C:\\Scripts\\inventory.ps1'
-};
+for (const fixture of fixtures) {
+  const actual = isSuspiciousPowerShell(fixture.event);
+  if (actual !== fixture.expected_match) {
+    throw new Error(`${fixture.name} expected ${fixture.expected_match} but received ${actual}`);
+  }
+}
 
-if (!isSuspiciousPowerShell(positive)) throw new Error('positive fixture did not match');
-if (isSuspiciousPowerShell(negative)) throw new Error('negative fixture matched unexpectedly');
-
-console.log('synthetic detection fixture: passed');
+console.log(`synthetic detection fixture: passed (${fixtures.length} cases)`);

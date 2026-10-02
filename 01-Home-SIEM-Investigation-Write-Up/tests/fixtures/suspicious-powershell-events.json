@@ -1,0 +1,22 @@
+[
+  {
+    "name": "encoded-command",
+    "expected_match": true,
+    "event": {
+      "event_code": 1,
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell.exe -NoProfile -EncodedCommand AAAA",
+      "scope": "synthetic-only"
+    }
+  },
+  {
+    "name": "documented-inventory-script",
+    "expected_match": false,
+    "event": {
+      "event_code": 1,
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell.exe -NoProfile -File C:\\Scripts\\inventory.ps1",
+      "scope": "synthetic-only"
+    }
+  }
+]
