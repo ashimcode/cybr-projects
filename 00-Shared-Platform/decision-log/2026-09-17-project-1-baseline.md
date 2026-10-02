@@ -11,7 +11,7 @@
 
 ## Rationale
 
-The host has sufficient CPU and memory for a modest hybrid lab. Approximately [storage capacity omitted] of free storage remains, so disk usage must be monitored and unnecessary VM snapshots or logs must be cleaned up.
+The lab should monitor disk usage and remove unnecessary VM snapshots or logs as part of routine maintenance.
 
 ## Revisit conditions
 
