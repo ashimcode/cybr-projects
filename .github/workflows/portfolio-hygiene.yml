@@ -43,6 +43,7 @@ jobs:
           test -f CONTRIBUTING.md
           test -f 01-Home-SIEM-Investigation-Write-Up/docs/interview-walkthrough.md
           test -f 01-Home-SIEM-Investigation-Write-Up/docs/phase-2-setup-plan.md
+          test -f 01-Home-SIEM-Investigation-Write-Up/docs/collector-decision.md
           test -f 01-Home-SIEM-Investigation-Write-Up/docs/synthetic-validation.md
           test -f 01-Home-SIEM-Investigation-Write-Up/tests/fixtures/suspicious-powershell-events.json
 

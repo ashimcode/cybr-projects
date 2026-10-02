@@ -79,4 +79,5 @@ By completion, the learner should be able to explain the telemetry path from Win
 - `docs/interview-walkthrough.md` — current interview-ready explanation with verified and unverified boundaries
 - `docs/linkedin-brief.md` — future promotion draft held behind the Windows/Sysmon evidence gate
 - `docs/phase-2-setup-plan.md` — controlled endpoint-telemetry entry and exit gates
+- `docs/collector-decision.md` — receiver-compatible collector options and the selection rule
 - `detections/` and `tests/` include a synthetic-only PowerShell detection draft; its Node.js fixture passes locally, while live validation remains gated on Windows/Sysmon telemetry
